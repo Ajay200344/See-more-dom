@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>see more DOM project</title>
+    <style>
+        #contain{
+            margin-top: 50px;
+            margin-left: 200px;
+        }
+        #hide{
+            display: none;
+        }
+        ul{
+            font-size: 20px;
+        }
+        #b1{
+            cursor: pointer;
+            font-size: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="contain">
+        <ul>
+            <li>html</li>
+            <li>css</li>
+            <li>javascript</li>
+            <span id="hide"><li>python</li>
+            <li>react</li>
+            <li>angular</li>
+            <li>java</li>
+            <li>nodejs</li>
+            <li>mongodb</li>
+            <li>flutter</li>
+            <li>kotlin</li>
+            <li>php</li></span>
+        </ul>
+        <button id="b1">see more</button>
+    </div>
+    <script>
+        const btn1=document.getElementById("b1");
+        const hidden=document.getElementById("hide");
+        let flag=0;
+        btn1.addEventListener("click",()=>{
+            if(flag==0){
+                hidden.style.display="inline";
+                btn1.innerHTML="see less";
+                flag=1;
+            }else{
+                hidden.style.display="none";
+                btn1.innerHTML="see more";
+                flag=0;
+            }
+            
+        });
+    </script>
+</body>
+</html>
